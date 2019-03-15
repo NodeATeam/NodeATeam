@@ -1,0 +1,20 @@
+1. 빌드 툴 설치(go언어, git)
+64bit 기준
+다운로드해서 설치
+  1. go-lang 설치
+  - https://dl.google.com/go/go1.11.5.windows-amd64.msi 
+  2. git 설치
+  - https://github.com/git-for-windows/git/releases/download/v2.21.0.windows.1/Git-2.21.0-64-bit.exe
+
+2. 메인넷 소프트웨어 지갑 설치
+   1. dep 툴 다운로드
+   - https://github.com/golang/dep/releases/download/v0.5.1/dep-windows-amd64.exe
+   2. [시작] - [cmd] 실행
+   3. 소프트웨어 소스 다운로드(cmd 에서 복사 붙혀넣기)
+   - git clone https://github.com/cosmos/cosmos-sdk
+   - cd cosmos-sdk
+   - git checkout   v0.33.0
+   - [1.] 항목에서 설치한 dep-windows-amd64.exe를 sdk폴더로 이동
+   - .\dep-windows-amd64.exe ensure -v
+   - go install ./cmd/gaia/cmd/gaiacli
+
